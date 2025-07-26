@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "freeRTOS-kernel": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1752490218,
+        "narHash": "sha256-jaVdWcoPaLuxibYQA+bKY7AgNCMCeIbDvqXy3XWJo+k=",
+        "owner": "FreeRTOS",
+        "repo": "FreeRTOS-kernel",
+        "rev": "684b34ca8db0de1277b9b5359e0d1d822b53b6a2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "FreeRTOS",
+        "repo": "FreeRTOS-kernel",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1752950548,
@@ -16,9 +32,27 @@
         "type": "github"
       }
     },
+    "picoprobe": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1751896838,
+        "narHash": "sha256-uEsMeIfjR2Y1g033e2aT10oUfoKuhG0QktMu89Z/kJI=",
+        "owner": "raspberrypi",
+        "repo": "picoprobe",
+        "rev": "466432c5eb8d3c4a70842833804996c15ed18c51",
+        "type": "github"
+      },
+      "original": {
+        "owner": "raspberrypi",
+        "repo": "picoprobe",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "freeRTOS-kernel": "freeRTOS-kernel",
+        "nixpkgs": "nixpkgs",
+        "picoprobe": "picoprobe"
       }
     }
   },
