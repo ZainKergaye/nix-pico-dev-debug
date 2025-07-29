@@ -38,6 +38,9 @@
 *.i*86
 *.x86_64
 *.hex
+*.dis
+*.uf2
+*.bin
 
 # Debug files
 *.dSYM/
@@ -73,3 +76,6 @@ CMakeUserPresets.json
 generated/
 pico-sdk/
 pico_flash_region.ld
+build/
+result
+

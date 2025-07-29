@@ -1,7 +1,9 @@
 # Nix RPI Pico debug environemnt
 
-## To use:
+## To Compile:
 
 '''bash
-nix develop
+nix build .#buildScript
+
+nix run .#buildScript
 '''

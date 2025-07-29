@@ -46,6 +46,23 @@
         shellHook = ''
           echo "Welcome to the pico debug devshell"
         '';
+
+        packages.buildScript = pkgs.writeShellApplication {
+          name = "build-and-test";
+          runtimeInputs = with pkgs; [
+            cmake
+            gcc-arm-embedded
+            pico-sdk-211
+          ];
+          text = ''
+            echo "Removing cache"
+                     rm CMakeCache.txt
+            echo "Running cmake"
+                     cmake .
+            echo "Running make"
+                     make -j 4
+          '';
+        };
       }
     );
 }
