@@ -54,9 +54,15 @@
             gcc-arm-embedded
             pico-sdk-211
           ];
+          runtimeEnv = {
+            PICO_SDK_PATH = "${pkgs.pico-sdk}/lib/pico-sdk";
+            PICO_BOARD = "pico";
+            PICO_PLATFORM = "rp2040";
+            PICO_COMPILER = "pico_arm_cortex_m0plus_gcc";
+          };
           text = ''
             echo "Removing cache"
-                     rm CMakeCache.txt
+                     rm -f CMakeCache.txt
             echo "Running cmake"
                      cmake .
             echo "Running make"
