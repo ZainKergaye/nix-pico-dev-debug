@@ -30,6 +30,7 @@
       with pkgs; {
         devShell = mkShell {
           buildInputs = [
+            minicom
             openocd-rp2040
             cmake
             python3
